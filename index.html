@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0e27">
+    <title>RPL Online Exam - SMK Negeri 1 Lintau Buo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== ANIMATED BACKGROUND ===== -->
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+    
+    <!-- Floating Code Symbols -->
+    <div class="floating-symbols">
+        <span class="symbol">&lt;/&gt;</span>
+        <span class="symbol">{ }</span>
+        <span class="symbol">[ ]</span>
+        <span class="symbol">01</span>
+        <span class="symbol">10</span>
+        <span class="symbol">( )</span>
+        <span class="symbol">fn</span>
+        <span class="symbol">#</span>
+        <span class="symbol">=&gt;</span>
+        <span class="symbol">if</span>
+        <span class="symbol">var</span>
+        <span class="symbol">async</span>
+        <span class="symbol">await</span>
+        <span class="symbol">class</span>
+        <span class="symbol">return</span>
+        <span class="symbol">import</span>
+        <span class="symbol">SELECT</span>
+        <span class="symbol">INSERT</span>
+        <span class="symbol">WHERE</span>
+        <span class="symbol">FROM</span>
+        <span class="symbol">.dart</span>
+        <span class="symbol">.json</span>
+        <span class="symbol">.sql</span>
+        <span class="symbol">Widget</span>
+        <span class="symbol">State</span>
+        <span class="symbol">build()</span>
+    </div>
+
+    <!-- Code Rain Effect -->
+    <div class="code-rain">
+        <div class="rain-column">01001</div>
+        <div class="rain-column">FLUTTER</div>
+        <div class="rain-column">10110</div>
+        <div class="rain-column">DART</div>
+        <div class="rain-column">01101</div>
+        <div class="rain-column">SQLITE</div>
+        <div class="rain-column">11010</div>
+        <div class="rain-column">FIREBASE</div>
+        <div class="rain-column">10101</div>
+        <div class="rain-column">CODE</div>
+    </div>
+
+    <!-- ===== SCREEN: OPENING ===== -->
+    <div id="screen-opening" class="screen active">
+        <div class="container">
+            <!-- Hero Illustration SVG -->
+            <div class="hero-illustration">
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+                    <!-- Laptop Base -->
+                    <defs>
+                        <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#232a5c;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#1a2047;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Glow Background -->
+                    <circle cx="200" cy="150" r="120" fill="url(#screenGrad)" opacity="0.15" filter="url(#glow)"/>
+                    
+                    <!-- Laptop Screen -->
+                    <rect x="90" y="60" width="220" height="140" rx="8" fill="url(#laptopGrad)" stroke="#3b82f6" stroke-width="2"/>
+                    <rect x="100" y="70" width="200" height="120" rx="4" fill="#0a0e27"/>
+                    
+                    <!-- Code Lines on Screen -->
+                    <rect x="110" y="82" width="60" height="4" rx="2" fill="#00d9ff" opacity="0.9"/>
+                    <rect x="175" y="82" width="40" height="4" rx="2" fill="#8b5cf6" opacity="0.9"/>
+                    
+                    <rect x="110" y="94" width="30" height="4" rx="2" fill="#10b981" opacity="0.9"/>
+                    <rect x="145" y="94" width="80" height="4" rx="2" fill="#a8b2d1" opacity="0.7"/>
+                    
+                    <rect x="120" y="106" width="50" height="4" rx="2" fill="#f59e0b" opacity="0.9"/>
+                    <rect x="175" y="106" width="60" height="4" rx="2" fill="#a8b2d1" opacity="0.7"/>
+                    
+                    <rect x="120" y="118" width="40" height="4" rx="2" fill="#ef4444" opacity="0.9"/>
+                    <rect x="165" y="118" width="70" height="4" rx="2" fill="#a8b2d1" opacity="0.7"/>
+                    
+                    <rect x="120" y="130" width="90" height="4" rx="2" fill="#00d9ff" opacity="0.9"/>
+                    
+                    <rect x="110" y="142" width="45" height="4" rx="2" fill="#10b981" opacity="0.9"/>
+                    <rect x="160" y="142" width="50" height="4" rx="2" fill="#a8b2d1" opacity="0.7"/>
+                    
+                    <rect x="110" y="154" width="70" height="4" rx="2" fill="#8b5cf6" opacity="0.9"/>
+                    <rect x="185" y="154" width="40" height="4" rx="2" fill="#f59e0b" opacity="0.9"/>
+                    
+                    <rect x="110" y="166" width="55" height="4" rx="2" fill="#00d9ff" opacity="0.9"/>
+                    <rect x="170" y="166" width="65" height="4" rx="2" fill="#a8b2d1" opacity="0.7"/>
+                    
+                    <!-- Cursor Blink -->
+                    <rect x="240" y="166" width="2" height="6" fill="#00d9ff">
+                        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+                    </rect>
+                    
+                    <!-- Laptop Base -->
+                    <path d="M 70 200 L 330 200 L 320 215 L 80 215 Z" fill="url(#laptopGrad)" stroke="#3b82f6" stroke-width="1.5"/>
+                    <rect x="180" y="200" width="40" height="4" rx="2" fill="#3b82f6" opacity="0.5"/>
+                    
+                    <!-- Floating Tech Icons -->
+                    <!-- Flutter Icon -->
+                    <g transform="translate(50, 80)">
+                        <circle r="20" fill="#0d6efd" opacity="0.2"/>
+                        <path d="M -8 -8 L 0 0 L -8 8 L -12 4 L -4 0 L -12 -4 Z" fill="#54c5f8"/>
+                        <path d="M 0 0 L 8 8 L 12 4 L 4 0 Z" fill="#54c5f8" opacity="0.7"/>
+                    </g>
+                    
+                    <!-- Dart Icon -->
+                    <g transform="translate(350, 90)">
+                        <circle r="20" fill="#00d9ff" opacity="0.2"/>
+                        <path d="M -8 -8 L 8 -8 L 10 -6 L 10 6 L 8 8 L -6 8 L -10 4 L -10 -6 Z" fill="#00d9ff"/>
+                    </g>
+                    
+                    <!-- Firebase Icon -->
+                    <g transform="translate(60, 230)">
+                        <circle r="20" fill="#ffa000" opacity="0.2"/>
+                        <path d="M -6 8 L -2 -6 L 2 2 L 6 -10 L 8 8 Z" fill="#ffa000"/>
+                    </g>
+                    
+                    <!-- Database Icon -->
+                    <g transform="translate(340, 230)">
+                        <circle r="20" fill="#10b981" opacity="0.2"/>
+                        <ellipse cx="0" cy="-6" rx="10" ry="3" fill="#10b981"/>
+                        <path d="M -10 -6 L -10 6 Q 0 12 10 6 L 10 -6" fill="none" stroke="#10b981" stroke-width="2"/>
+                        <ellipse cx="0" cy="0" rx="10" ry="3" fill="none" stroke="#10b981" stroke-width="1" opacity="0.6"/>
+                    </g>
+                    
+                    <!-- Connection Lines -->
+                    <line x1="70" y1="90" x2="95" y2="110" stroke="#3b82f6" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+                    <line x1="330" y1="100" x2="305" y2="115" stroke="#00d9ff" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+                    <line x1="80" y1="220" x2="100" y2="200" stroke="#ffa000" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+                    <line x1="320" y1="220" x2="300" y2="200" stroke="#10b981" stroke-width="1" opacity="0.3" stroke-dasharray="3,3"/>
+                </svg>
+            </div>
+
+            <div class="logo-box">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <div class="logo-text">RPL ONLINE EXAM</div>
+            </div>
+
+            <div class="school-card">
+                <div class="school-name">SMK NEGERI 1 LINTAU BUO</div>
+                <div class="school-sub">Konsentrasi Keahlian Rekayasa Perangkat Lunak</div>
+            </div>
+
+            <div class="exam-info-card">
+                <div class="info-row">
+                    <span class="info-label">📚 Mata Pelajaran</span>
+                    <span class="info-value">Pemrograman Perangkat Bergerak</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">🎓 Kelas</span>
+                    <span class="info-value">XII RPL</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">💻 Materi</span>
+                    <span class="info-value tech-tags">
+                        <span class="tech-tag flutter">Flutter</span>
+                        <span class="tech-tag dart">Dart</span>
+                        <span class="tech-tag sqlite">SQLite</span>
+                        <span class="tech-tag firebase">Firebase</span>
+                    </span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">⏱️ Waktu per Soal</span>
+                    <span class="info-value highlight">3 MENIT</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">📝 Jumlah Soal</span>
+                    <span class="info-value">25 Soal</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">🏆 Nilai Maksimal</span>
+                    <span class="info-value highlight">100 POIN</span>
+                </div>
+            </div>
+
+            <button class="btn-primary btn-large" onclick="showScreen('screen-login')">
+                MULAI UJIAN →
+            </button>
+
+            <div class="footer-note">
+                <span class="pulse-dot"></span>
+                Sistem Ujian Digital • 2026
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: LOGIN ===== -->
+    <div id="screen-login" class="screen">
+        <div class="container">
+            <div class="logo-box small">
+                <div class="logo-icon">&lt;/&gt;</div>
+                <div class="logo-text">IDENTITAS PESERTA</div>
+            </div>
+
+            <form id="login-form" class="login-form" onsubmit="submitLogin(event)">
+                <div class="form-group">
+                    <label>👤 Nama Lengkap</label>
+                    <input type="text" id="studentName" required placeholder="Masukkan nama lengkap" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>🎓 Kelas</label>
+                    <input type="text" id="studentClass" required placeholder="Contoh: XII RPL" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>🔢 Nomor Absen</label>
+                    <input type="number" id="studentNumber" required placeholder="Contoh: 12" min="1" max="99" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>🆔 NIS / NISN</label>
+                    <input type="text" id="studentNIS" required placeholder="Masukkan NIS/NISN" autocomplete="off">
+                </div>
+
+                <button type="submit" class="btn-primary btn-large">LANJUTKAN →</button>
+                <button type="button" class="btn-secondary" onclick="showScreen('screen-opening')">← Kembali</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: PETUNJUK ===== -->
+    <div id="screen-instruction" class="screen">
+        <div class="container">
+            <div class="logo-box small">
+                <div class="logo-icon">📋</div>
+                <div class="logo-text">PETUNJUK UJIAN</div>
+            </div>
+
+            <div class="instruction-card">
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Jumlah soal: <strong>25 soal pilihan ganda</strong></span>
+                </div>
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Waktu per soal: <strong>3 menit (180 detik)</strong></span>
+                </div>
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Nilai tiap soal: <strong>4 poin</strong> (total 100)</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Pilih <strong>satu jawaban</strong> yang paling tepat</span>
+                </div>
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Ujian hanya dapat dikerjakan <strong>satu kali</strong></span>
+                </div>
+                <div class="instruction-item">
+                    <span class="check-icon">✓</span>
+                    <span>Jawaban tersimpan otomatis</span>
+                </div>
+            </div>
+
+            <div class="warning-box critical">
+                <span class="warn-icon">🚨</span>
+                <div>
+                    <strong>PERINGATAN PENTING!</strong><br>
+                    • Jika Anda <strong>keluar dari halaman ujian</strong> (pindah tab, minimize, notifikasi, dll), ujian akan <strong>OTOMATIS BERHENTI & DIKUMPULKAN</strong>.<br>
+                    • Pastikan fokus penuh pada halaman ujian.<br>
+                    • Matikan notifikasi HP sebelum mulai.
+                </div>
+            </div>
+
+            <button class="btn-primary btn-large" onclick="confirmStart()">
+                ✓ SAYA SIAP MENGERJAKAN
+            </button>
+            <button type="button" class="btn-secondary" onclick="showScreen('screen-login')">← Kembali</button>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: EXAM ===== -->
+    <div id="screen-exam" class="screen">
+        <div class="exam-topbar">
+            <div class="topbar-left">
+                <div class="topbar-logo">&lt;/&gt;</div>
+                <div class="topbar-title">RPL EXAM</div>
+            </div>
+            <div class="topbar-right">
+                <div class="timer-box" id="timer-box">
+                    <span class="timer-icon">⏱</span>
+                    <span class="timer-value" id="timer-display">03:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-timer-bar">
+            <div class="qtimer-info">
+                <span>⏳ Waktu Soal <strong id="qtimer-number">1</strong>/25</span>
+                <span id="qtimer-text" class="qtimer-time">03:00</span>
+            </div>
+            <div class="qtimer-progress">
+                <div class="qtimer-fill" id="qtimer-fill" style="width: 100%"></div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-info">
+                <span id="progress-text">Soal 1 dari 25</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+            <div class="progress-stats">
+                <span class="stat-done">✓ <span id="stat-answered">0</span> Dijawab</span>
+                <span class="stat-remain">○ <span id="stat-remain">25</span> Belum</span>
+            </div>
+        </div>
+
+        <div class="question-area">
+            <div class="question-header">
+                <span class="question-number" id="question-number">SOAL 1</span>
+                <span class="question-total">dari 25 • 4 poin</span>
+            </div>
+            <div class="question-text" id="question-text"></div>
+            <div class="options-list" id="options-list"></div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn-nav" id="btn-prev" onclick="prevQuestion()">← Sebelumnya</button>
+            <button class="btn-nav primary" id="btn-next" onclick="nextQuestion()">Selanjutnya →</button>
+        </div>
+
+        <div class="question-grid-wrapper">
+            <div class="grid-title">Navigasi Soal</div>
+            <div class="question-grid" id="question-grid"></div>
+            <button class="btn-submit" onclick="confirmSubmit()">✓ KUMPULKAN UJIAN</button>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: RESULT ===== -->
+    <div id="screen-result" class="screen">
+        <div class="container">
+            <div class="result-header">
+                <div class="result-icon">✓</div>
+                <h2>UJIAN SELESAI</h2>
+                <p>Jawaban Anda telah dikumpulkan</p>
+            </div>
+
+            <div class="result-card">
+                <div class="result-student">
+                    <div class="rs-label">Nama Peserta</div>
+                    <div class="rs-value" id="result-name">-</div>
+                </div>
+                <div class="result-student">
+                    <div class="rs-label">Kelas</div>
+                    <div class="rs-value" id="result-class">-</div>
+                </div>
+            </div>
+
+            <div class="score-card">
+                <div class="score-circle" id="score-circle">
+                    <div class="score-value" id="score-value">0</div>
+                    <div class="score-label">POIN</div>
+                </div>
+                <div class="score-max">dari 100</div>
+            </div>
+
+            <div class="result-stats">
+                <div class="stat-box correct">
+                    <div class="stat-num" id="stat-correct">0</div>
+                    <div class="stat-text">Benar</div>
+                    <div class="stat-sub">×4 = <span id="stat-correct-points">0</span></div>
+                </div>
+                <div class="stat-box wrong">
+                    <div class="stat-num" id="stat-wrong">0</div>
+                    <div class="stat-text">Salah</div>
+                    <div class="stat-sub">0 poin</div>
+                </div>
+                <div class="stat-box empty">
+                    <div class="stat-num" id="stat-empty">0</div>
+                    <div class="stat-text">Kosong</div>
+                    <div class="stat-sub">0 poin</div>
+                </div>
+            </div>
+
+            <div class="result-info">
+                <div class="info-row">
+                    <span>Total Soal</span>
+                    <span id="result-total">25</span>
+                </div>
+                <div class="info-row">
+                    <span>Waktu Pengerjaan</span>
+                    <span id="result-time">-</span>
+                </div>
+                <div class="info-row">
+                    <span>Status</span>
+                    <span id="result-status" class="status-badge">Selesai</span>
+                </div>
+            </div>
+
+            <button class="btn-whatsapp" onclick="sendToWhatsApp()">
+                <span class="wa-icon">📱</span>
+                <span>KIRIM HASIL KE GURU (WhatsApp)</span>
+            </button>
+
+            <div class="result-note">
+                <strong>Catatan:</strong><br>
+                Screenshot hasil ini dan kirimkan juga kepada guru sebagai bukti.<br>
+                Tombol di atas akan membuka WhatsApp dengan pesan otomatis.
+            </div>
+
+            <div class="footer-note">
+                Terima kasih telah mengerjakan ujian.
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: ALREADY COMPLETED ===== -->
+    <div id="screen-completed" class="screen">
+        <div class="container">
+            <div class="completed-box">
+                <div class="completed-icon">🔒</div>
+                <h2>UJIAN SELESAI</h2>
+                <p>Anda sudah menyelesaikan ujian ini.</p>
+                <p class="small">Ujian hanya dapat dikerjakan satu kali pada perangkat ini.</p>
+                <div class="completed-info">
+                    <div>Peserta: <strong id="completed-name">-</strong></div>
+                    <div>Kelas: <strong id="completed-class">-</strong></div>
+                </div>
+                <button class="btn-primary" onclick="viewResult()">Lihat Hasil</button>
+                <button class="btn-whatsapp" style="margin-top:10px" onclick="sendToWhatsApp()">
+                    <span class="wa-icon">📱</span>
+                    <span>KIRIM ULANG KE GURU</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCREEN: AUTO STOP ===== -->
+    <div id="screen-autostop" class="screen">
+        <div class="container">
+            <div class="autostop-box">
+                <div class="autostop-icon">🛑</div>
+                <h2>UJIAN DIHENTIKAN</h2>
+                <p>Anda keluar dari halaman ujian.</p>
+                <p class="small">Sesuai aturan, ujian otomatis dihentikan dan jawaban dikumpulkan.</p>
+                <button class="btn-primary" onclick="viewResult()">Lihat Hasil</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODALS ===== -->
+    <div id="modal-confirm" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h3>APAKAH ANDA YAKIN?</h3>
+            <p>Jawaban yang sudah dikumpulkan tidak dapat diubah.</p>
+            <div class="modal-info" id="modal-info">Anda masih memiliki <strong>0 soal</strong> belum dijawab.</div>
+            <div class="modal-buttons">
+                <button class="btn-secondary" onclick="closeModal()">BATAL</button>
+                <button class="btn-primary" onclick="submitExam(false)">YA, KUMPULKAN</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-time" class="modal">
+        <div class="modal-content time-warning">
+            <div class="modal-icon">⏰</div>
+            <h3>WAKTU SOAL HABIS</h3>
+            <p id="time-warning-text">Waktu 3 menit untuk soal ini telah habis.</p>
+            <button class="btn-primary" onclick="closeTimeWarning()">LANJUT</button>
+        </div>
+    </div>
+
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
